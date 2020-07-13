@@ -1,13 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
     const Gallery = sequelize.define('gallery', {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
+        file: {
+            type: DataTypes.STRING
         },
-        name: DataTypes.STRING,
-        description: DataTypes.STRING,
-        poster: DataTypes.STRING,
+        title: {
+            type: DataTypes.STRING
+        },
+        caption: {
+            type: DataTypes.STRING
+        },
         owner: {
             type: DataTypes.INTEGER,
             allowNull: false

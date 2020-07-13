@@ -1,12 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
     const Memory = sequelize.define('memory', {
-        memory: {
-            type: DataTypes.STRING,
-            allowNull: false
+        file: {
+            type: DataTypes.STRING
         },
-        dog: {
-            type: DataTypes.STRING,
-            allowNull: false
+        memory: {
+            type: DataTypes.STRING
+        },
+        pet: {
+            type: DataTypes.STRING
         },
         owner: {
             type: DataTypes.INTEGER,
@@ -15,4 +16,3 @@ module.exports = (sequelize, DataTypes) => {
     })
     return Memory;
 }
-
